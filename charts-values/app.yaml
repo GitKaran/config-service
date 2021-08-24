@@ -1,0 +1,6 @@
+# Below parameter will override values under charts/app/values.yaml
+app:
+  name: config-service-app
+  replicaCount: 2
+  config:
+    servePort: 8092

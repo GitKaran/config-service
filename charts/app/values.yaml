@@ -1,0 +1,15 @@
+app:
+  name: config-service-app
+  group: backend
+  replicaCount: 1
+  container:
+    image: karant/config-service:latest
+    resources:
+      memory: "128Mi"
+      cpu: "500m"
+  service:
+    type: LoadBalancer
+    port: 9090
+  config:
+    name: app-config-map
+    servePort: 8092

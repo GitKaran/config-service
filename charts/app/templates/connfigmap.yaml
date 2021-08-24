@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.app.config.name }}
+  labels:
+    group: {{ .Values.app.group }}
+data:
+  SERVE_PORT: {{ required "SERVE_PORT is missing" .Values.app.config.servePort | quote }}

@@ -1,0 +1,7 @@
+ingress:
+  name: config-service-ingress
+  group: backend
+  host: config-service
+  app:
+    name: config-service-app
+    port: 8092
